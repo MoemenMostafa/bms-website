@@ -475,13 +475,8 @@ function initNav() {
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileClose = document.getElementById('mobile-close');
 
-  const navLogo = document.getElementById('nav-logo');
   window.addEventListener('scroll', () => {
-    const isScrolled = window.scrollY > 60;
-    navbar.classList.toggle('scrolled', isScrolled);
-    if (navLogo) {
-      navLogo.src = isScrolled ? 'assets/logo-color.png' : 'assets/logo-black.png';
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
   hamburger.addEventListener('click', () => {
