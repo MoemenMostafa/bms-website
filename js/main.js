@@ -440,6 +440,7 @@ function applyLang(lang) {
   const html = document.documentElement;
   html.lang = lang;
   html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl-active', lang === 'ar');
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
