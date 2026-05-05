@@ -573,8 +573,16 @@ footer {
 [dir="rtl"] .about-grid { direction: rtl; }
 [dir="rtl"] .hero-btns { direction: rtl; }
 [dir="rtl"] .service-card { text-align: right; }
+[dir="rtl"] .testimonial-card { text-align: right; }
 [dir="rtl"] .testimonial-card::before { left: auto; right: 1.2rem; }
-[dir="rtl"] .testimonial-author { flex-direction: row-reverse; }
+[dir="rtl"] .testimonial-author { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .testimonial-name,
+[dir="rtl"] .testimonial-company { text-align: right; }
+
+/* Portfolio labels */
+[dir="rtl"] .portfolio-label { text-align: right; }
+[dir="rtl"] .portfolio-label h3,
+[dir="rtl"] .portfolio-label span { text-align: right; }
 
 /* Form */
 [dir="rtl"] .form-group input,
