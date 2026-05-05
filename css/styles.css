@@ -246,9 +246,10 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
 .stat-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
 .stat-pill {
   background: var(--light);
-  border-left: 4px solid var(--red);
+  border-inline-start: 4px solid var(--red);
   padding: 0.6rem 1.2rem;
-  border-radius: 0 8px 8px 0;
+  border-start-end-radius: 8px;
+  border-end-end-radius: 8px;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--dark);
@@ -378,7 +379,7 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
   color: var(--yellow);
   opacity: 0.4;
   position: absolute;
-  top: -0.5rem; left: 1.2rem;
+  top: -0.5rem; inset-inline-start: 1.2rem;
   line-height: 1;
   font-family: Georgia, serif;
 }
@@ -565,54 +566,53 @@ footer {
 .fade-up:nth-child(5) { transition-delay: 0.4s; }
 .fade-up:nth-child(6) { transition-delay: 0.5s; }
 
-/* ── RTL overrides ── */
+/* RTL overrides */
 body.rtl-active { font-family: 'Cairo', 'Tajawal', 'Inter', sans-serif; }
 
-/* Nav */
-body.rtl-active .nav-links { flex-direction: row-reverse; }
-body.rtl-active .nav-right  { flex-direction: row-reverse; }
+/* Fixed link order: rely on dir="rtl" and default flex-direction: row */
+body.rtl-active .nav-links { flex-direction: row !important; }
+body.rtl-active .nav-right  { flex-direction: row !important; }
 
 /* Hero */
-body.rtl-active .hero-btns { direction: rtl; }
+body.rtl-active .hero-btns { direction: rtl !important; }
 
 /* About */
-body.rtl-active .about-grid { direction: rtl; }
-body.rtl-active .stat-pill  { border-left: none; border-right: 4px solid var(--red); border-radius: 8px 0 0 8px; }
+body.rtl-active .about-grid { direction: rtl !important; }
 
 /* Services */
-body.rtl-active .service-card { text-align: right; }
+body.rtl-active .service-card { text-align: right !important; }
 
 /* Portfolio labels */
-body.rtl-active .portfolio-label { direction: rtl; text-align: right; }
+body.rtl-active .portfolio-label { direction: rtl !important; text-align: right !important; }
 
 /* Testimonials */
-body.rtl-active .testimonial-card { text-align: right; direction: rtl; }
-body.rtl-active .testimonial-card::before { left: auto; right: 1.2rem; }
-body.rtl-active .testimonial-author { flex-direction: row-reverse !important; }
-body.rtl-active .testimonial-name,
-body.rtl-active .testimonial-company { text-align: right; }
+body.rtl-active .testimonial-card { text-align: right !important; direction: rtl !important; }
+body.rtl-active .testimonial-author { flex-direction: row !important; }
 
 /* Form */
-body.rtl-active .form-row    { direction: rtl; }
-body.rtl-active .form-group label { text-align: right; }
+body.rtl-active .form-row    { direction: rtl !important; }
+body.rtl-active .form-group label { text-align: right !important; }
 body.rtl-active .form-group input,
 body.rtl-active .form-group select,
-body.rtl-active .form-group textarea { text-align: right; direction: rtl; }
+body.rtl-active .form-group textarea { text-align: right !important; direction: rtl !important; }
 
 /* Contact */
-body.rtl-active .contact-grid        { direction: rtl; }
-body.rtl-active .contact-item        { flex-direction: row-reverse !important; }
-body.rtl-active .contact-item-text   { text-align: right; }
+body.rtl-active .contact-grid        { direction: rtl !important; }
+body.rtl-active .contact-item        { flex-direction: row !important; }
 body.rtl-active .contact-info h3,
-body.rtl-active .contact-info p      { text-align: right; }
+body.rtl-active .contact-info p      { text-align: right !important; }
 
 /* Footer */
-body.rtl-active .footer-top     { direction: rtl; }
-body.rtl-active .footer-brand p { text-align: right; }
-body.rtl-active .footer-col h4  { text-align: right; }
-body.rtl-active .footer-col ul  { text-align: right; align-items: flex-end; }
-body.rtl-active .footer-bottom  { flex-direction: row-reverse; }
-body.rtl-active .footer-bottom p { text-align: right; }
+body.rtl-active .footer-top     { direction: rtl !important; }
+body.rtl-active .footer-brand p { text-align: right !important; }
+body.rtl-active .footer-col h4  { text-align: right !important; }
+body.rtl-active .footer-col ul  { text-align: right !important; align-items: flex-end !important; }
+body.rtl-active .footer-bottom  { flex-direction: row-reverse !important; }
+body.rtl-active .footer-bottom p { text-align: right !important; }
+
+/* Mobile Menu Fixes */
+body.rtl-active .mobile-menu button#mobile-close { left: 1.5rem !important; right: auto !important; }
+
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
@@ -635,4 +635,10 @@ body.rtl-active .footer-bottom p { text-align: right; }
 @media (max-width: 480px) {
   .team-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Ensure mobile menu is hidden on desktop */
+@media (min-width: 769px) {
+  .mobile-menu { display: none !important; }
+  .hamburger { display: none !important; }
 }
