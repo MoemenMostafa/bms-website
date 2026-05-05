@@ -43,8 +43,11 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
   background: #fff;
   box-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
-#navbar .logo img { height: 72px; }
-#navbar .nav-logo-single { display: block; }
+#navbar .logo img { height: 72px; transition: opacity 0.3s; }
+#navbar .nav-logo-hero    { display: block; filter: brightness(0) invert(1); }
+#navbar .nav-logo-scrolled { display: none; }
+#navbar.scrolled .nav-logo-hero    { display: none; }
+#navbar.scrolled .nav-logo-scrolled { display: block; filter: none; }
 
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
