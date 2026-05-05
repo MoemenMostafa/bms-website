@@ -285,123 +285,56 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
   background: #2d2d2d;
   cursor: pointer;
 }
-/* ── Device Mockups ── */
-.mockup-wrap {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  padding: 1.5rem;
-}
-
-/* Browser mockup */
-.mockup-browser {
-  width: 100%; max-width: 320px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  background: #1e1e1e;
-}
-.mockup-browser-bar {
-  background: #2d2d2d;
-  padding: 8px 12px;
-  display: flex; align-items: center; gap: 8px;
-}
-.mockup-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-}
-.mockup-dot-red   { background: #ff5f57; }
-.mockup-dot-yellow{ background: #ffbd2e; }
-.mockup-dot-green { background: #28c840; }
-.mockup-url {
-  flex: 1;
-  background: #3d3d3d;
-  border-radius: 4px;
-  height: 18px;
-  margin-left: 6px;
-}
-.mockup-browser-body {
-  height: 160px;
-  position: relative;
+/* ── Portfolio Card Visuals ── */
+.portfolio-bg {
+  position: absolute; inset: 0;
   overflow: hidden;
 }
+/* Per-project gradient backgrounds */
+.pb-auto  { background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #01579B 100%); }
+.pb-tech  { background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 50%, #311B92 100%); }
+.pb-green { background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 50%, #33691E 100%); }
+.pb-bank  { background: linear-gradient(135deg, #0277BD 0%, #01579B 50%, #006064 100%); }
+.pb-okto  { background: linear-gradient(135deg, #E65100 0%, #BF360C 50%, #FF6F00 100%); }
+.pb-sport { background: linear-gradient(135deg, #CC0000 0%, #B71C1C 50%, #FF6D00 100%); }
 
-/* Phone mockup */
-.mockup-phone {
-  width: 120px;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-  background: #1e1e1e;
-  border: 6px solid #2d2d2d;
-  position: relative;
-}
-.mockup-phone-notch {
-  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-  width: 40px; height: 10px;
-  background: #1e1e1e;
-  border-radius: 5px;
-  z-index: 2;
-}
-.mockup-phone-body {
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Project colour themes */
-.mockup-theme-auto {
-  background: linear-gradient(145deg, #0f1729 0%, #1a2d5a 60%, #0d1f42 100%);
-}
-.mockup-theme-tech {
-  background: linear-gradient(145deg, #1a0533 0%, #3d1f6e 60%, #5c2d9e 100%);
-}
-.mockup-theme-green {
-  background: linear-gradient(145deg, #0a2310 0%, #1b5e2e 60%, #2d8a4a 100%);
-}
-.mockup-theme-bank {
-  background: linear-gradient(145deg, #0a1628 0%, #1a3a6e 60%, #0f2a52 100%);
-}
-.mockup-theme-okto {
-  background: linear-gradient(145deg, #2d1500 0%, #7a3b00 60%, #c46200 100%);
-}
-.mockup-theme-sport {
-  background: linear-gradient(145deg, #1a0a00 0%, #cc3300 60%, #ff6600 100%);
-}
-
-/* Abstract content shapes inside mockups */
-.mockup-shape {
-  position: absolute;
-  border-radius: 6px;
-  opacity: 0.25;
-  background: #fff;
-}
-.mockup-hero-bar {
-  position: absolute; top: 20px; left: 12px; right: 12px;
-  height: 32px; border-radius: 6px;
-  background: rgba(255,255,255,0.18);
-}
-.mockup-nav-bar {
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 22px; background: rgba(0,0,0,0.25);
-  display: flex; align-items: center; gap: 6px; padding: 0 8px;
-}
-.mockup-nav-dot { width: 28px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.3); }
-.mockup-card-row {
-  position: absolute; bottom: 16px; left: 12px; right: 12px;
-  display: flex; gap: 8px;
-}
-.mockup-mini-card {
-  flex: 1; height: 40px; border-radius: 6px;
-  background: rgba(255,255,255,0.12);
-}
-.mockup-text-line {
-  position: absolute;
-  height: 7px; border-radius: 4px;
-  background: rgba(255,255,255,0.2);
-}
-.mockup-accent {
+/* Geometric decoration elements */
+.pg-circle {
   position: absolute;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
+}
+.pg-circle-outline {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pg-bar {
+  position: absolute;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+}
+.pg-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Always-visible label strip at card bottom */
+.portfolio-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  z-index: 2;
+}
+.portfolio-label h3 {
+  font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.2rem;
+}
+.portfolio-label span {
+  font-size: 0.78rem; color: rgba(255,255,255,0.7);
+  font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
 }
 .portfolio-overlay {
   position: absolute; inset: 0;
