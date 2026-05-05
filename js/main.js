@@ -458,6 +458,29 @@ function applyLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+
+  // Apply inline RTL styles directly (overrides any CSS specificity issues)
+  const isRtl = lang === 'ar';
+  document.querySelectorAll('.testimonial-author').forEach(el => {
+    el.style.flexDirection = isRtl ? 'row-reverse' : '';
+  });
+  document.querySelectorAll('.testimonial-name, .testimonial-company').forEach(el => {
+    el.style.textAlign = isRtl ? 'right' : '';
+  });
+  document.querySelectorAll('.portfolio-label').forEach(el => {
+    el.style.direction  = isRtl ? 'rtl' : '';
+    el.style.textAlign  = isRtl ? 'right' : '';
+  });
+  document.querySelectorAll('.contact-item').forEach(el => {
+    el.style.flexDirection = isRtl ? 'row-reverse' : '';
+  });
+  document.querySelectorAll('.contact-item-text').forEach(el => {
+    el.style.textAlign = isRtl ? 'right' : '';
+  });
+  document.querySelectorAll('.footer-col ul').forEach(el => {
+    el.style.textAlign  = isRtl ? 'right' : '';
+    el.style.alignItems = isRtl ? 'flex-end' : '';
+  });
 }
 
 function initLang() {
