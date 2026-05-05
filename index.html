@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayern Marketing Solutions</title>
+  <meta name="description" content="Bold marketing strategies and exceptional events that make your brand unforgettable." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { red: '#CC0000', yellow: '#FFC200' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#hero" class="logo">
+      <img src="assets/logo-light.png" alt="Bayern Marketing Solutions" class="nav-logo-light" />
+      <img src="assets/logo-light.png" alt="Bayern Marketing Solutions" class="nav-logo-dark" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#services" data-i18n="nav_services">Services</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="#team" data-i18n="nav_team">Team</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;font-size:1.8rem;background:none;border:none;cursor:pointer;color:#1A1A1A;">✕</button>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="#team" data-i18n="nav_team">Team</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+    <div class="mobile-menu-lang">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="ar">AR</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero_badge">Marketing &amp; Events Agency</div>
+      <h1 class="hero-title" data-i18n="hero_title">We Make Your Brand<br>Unforgettable</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Crafting bold marketing strategies and exceptional events that drive results and leave lasting impressions.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary" data-i18n="hero_cta1">Get Started</a>
+        <a href="#portfolio" class="btn-secondary" data-i18n="hero_cta2">Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════════ -->
+  <section id="services" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="services_label">What We Do</p>
+      <h2 class="section-title" data-i18n="services_title">Services Built for Impact</h2>
+      <p class="section-sub" data-i18n="services_sub">From strategy to execution, we deliver end-to-end solutions that amplify your brand and grow your business.</p>
+
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">🎯</div>
+          <h3 data-i18n="svc1_title">Brand Strategy</h3>
+          <p data-i18n="svc1_desc">Defining your identity, positioning, and messaging to stand out in competitive markets.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">📈</div>
+          <h3 data-i18n="svc2_title">Digital Marketing</h3>
+          <p data-i18n="svc2_desc">Data-driven campaigns across SEO, PPC, and digital channels that convert.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🎪</div>
+          <h3 data-i18n="svc3_title">Event Management</h3>
+          <p data-i18n="svc3_desc">Flawless corporate events, conferences, and product launches from concept to execution.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">📱</div>
+          <h3 data-i18n="svc4_title">Social Media</h3>
+          <p data-i18n="svc4_desc">Building engaged communities and growing your presence across all platforms.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">✏️</div>
+          <h3 data-i18n="svc5_title">Content Creation</h3>
+          <p data-i18n="svc5_desc">Compelling copy, visuals, and video content that tells your brand story.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">📢</div>
+          <h3 data-i18n="svc6_title">PR &amp; Communications</h3>
+          <p data-i18n="svc6_desc">Strategic public relations that build trust and amplify your brand's voice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p class="section-label" data-i18n="about_label">Our Story</p>
+          <h2 data-i18n="about_title">Driven by Passion,<br>Fueled by Results</h2>
+          <p data-i18n="about_p1">Bayern Marketing Solutions was founded with a single mission: to help brands cut through the noise and connect authentically with their audiences.</p>
+          <p data-i18n="about_p2">With expertise spanning marketing, events, and communications, our team of passionate professionals delivers strategies that don't just look good — they work.</p>
+          <div class="stat-pills">
+            <span class="stat-pill" data-i18n="about_pill1">Founded 2018</span>
+            <span class="stat-pill" data-i18n="about_pill2">Munich, Germany</span>
+            <span class="stat-pill" data-i18n="about_pill3">Global Reach</span>
+            <span class="stat-pill" data-i18n="about_pill4">Award-Winning</span>
+          </div>
+        </div>
+        <div class="about-visual fade-up">
+          <h3 data-i18n="about_visual_title">Bold Ideas. Real Results.</h3>
+          <p data-i18n="about_visual_sub">We believe every brand has a unique story worth telling. Our job is to tell it in the most powerful, memorable way possible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PORTFOLIO
+  ══════════════════════════════════════════ -->
+  <section id="portfolio" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="portfolio_label">Our Work</p>
+      <h2 class="section-title" data-i18n="portfolio_title">Projects That Speak for Themselves</h2>
+      <p class="section-sub" data-i18n="portfolio_sub">A selection of campaigns, events, and creative work we are proud to call ours.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card fade-up">
+          <div class="portfolio-placeholder">🚗</div>
+          <div class="portfolio-overlay">
+            <h3 data-i18n="p1_title">AutoVision Launch</h3>
+            <p data-i18n="p1_cat">Brand Campaign</p>
+            <a href="#contact" data-i18n="view_project">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-card fade-up">
+          <div class="portfolio-placeholder">💻</div>
+          <div class="portfolio-overlay">
+            <h3 data-i18n="p2_title">TechSummit Munich</h3>
+            <p data-i18n="p2_cat">Event Management</p>
+            <a href="#contact" data-i18n="view_project">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-card fade-up">
+          <div class="portfolio-placeholder">🌿</div>
+          <div class="portfolio-overlay">
+            <h3 data-i18n="p3_title">GreenLeaf Rebrand</h3>
+            <p data-i18n="p3_cat">Brand Strategy</p>
+            <a href="#contact" data-i18n="view_project">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-card fade-up">
+          <div class="portfolio-placeholder">🏦</div>
+          <div class="portfolio-overlay">
+            <h3 data-i18n="p4_title">NexaBank Digital</h3>
+            <p data-i18n="p4_cat">Digital Marketing</p>
+            <a href="#contact" data-i18n="view_project">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-card fade-up">
+          <div class="portfolio-placeholder">🍺</div>
+          <div class="portfolio-overlay">
+            <h3 data-i18n="p5_title">Oktoberfest Corporate</h3>
+            <p data-i18n="p5_cat">Event Activation</p>
+            <a href="#contact" data-i18n="view_project">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-card fade-up">
+          <div class="portfolio-placeholder">⚽</div>
+          <div class="portfolio-overlay">
+            <h3 data-i18n="p6_title">SportsPro Campaign</h3>
+            <p data-i18n="p6_cat">Social Media</p>
+            <a href="#contact" data-i18n="view_project">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section id="testimonials" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="testimonials_label">Client Love</p>
+      <h2 class="section-title" data-i18n="testimonials_title">What Our Clients Say</h2>
+      <p class="section-sub" data-i18n="testimonials_sub">Don't take our word for it — hear from the brands we've helped grow.</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <p class="testimonial-text" data-i18n="t1_text">"Bayern transformed our product launch into an unforgettable experience. The attention to detail and creative energy they brought was unmatched."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <div class="testimonial-name" data-i18n="t1_name">Sarah Müller</div>
+              <div class="testimonial-company" data-i18n="t1_company">AutoVision GmbH</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <p class="testimonial-text" data-i18n="t2_text">"Our digital campaigns with Bayern achieved 3× the ROI we expected. Their strategic thinking and execution are second to none."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JW</div>
+            <div>
+              <div class="testimonial-name" data-i18n="t2_name">James Wilson</div>
+              <div class="testimonial-company" data-i18n="t2_company">NexaBank Europe</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <p class="testimonial-text" data-i18n="t3_text">"The TechSummit event they organised was flawless. From venue setup to speaker management, everything ran perfectly."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PS</div>
+            <div>
+              <div class="testimonial-name" data-i18n="t3_name">Priya Sharma</div>
+              <div class="testimonial-company" data-i18n="t3_company">TechSummit Int'l</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       STATS COUNTER
+  ══════════════════════════════════════════ -->
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">
+          <span class="counter-num" data-target="200">0</span><span class="stat-suffix" data-i18n="stat1_suffix">+</span>
+        </div>
+        <div class="stat-label" data-i18n="stat1_label">Clients Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">
+          <span class="counter-num" data-target="350">0</span><span class="stat-suffix" data-i18n="stat2_suffix">+</span>
+        </div>
+        <div class="stat-label" data-i18n="stat2_label">Events Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">
+          <span class="counter-num" data-target="500">0</span><span class="stat-suffix" data-i18n="stat3_suffix">+</span>
+        </div>
+        <div class="stat-label" data-i18n="stat3_label">Campaigns Launched</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">
+          <span class="counter-num" data-target="6">0</span><span class="stat-suffix" data-i18n="stat4_suffix"></span>
+        </div>
+        <div class="stat-label" data-i18n="stat4_label">Years of Excellence</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TEAM
+  ══════════════════════════════════════════ -->
+  <section id="team" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="team_label">Our People</p>
+      <h2 class="section-title" data-i18n="team_title">Meet the Team</h2>
+      <p class="section-sub" data-i18n="team_sub">A diverse group of creative thinkers, strategists, and event specialists united by one goal — your success.</p>
+
+      <div class="team-grid">
+        <div class="team-card fade-up">
+          <div class="team-card-top"></div>
+          <div class="team-photo">👔</div>
+          <div class="team-card-body">
+            <div class="team-name" data-i18n="tm1_name">Klaus Bauer</div>
+            <div class="team-role" data-i18n="tm1_role">Founder &amp; CEO</div>
+            <div class="team-bio" data-i18n="tm1_bio">Visionary leader with 15+ years building brands across Europe and the Middle East.</div>
+          </div>
+        </div>
+        <div class="team-card fade-up">
+          <div class="team-card-top"></div>
+          <div class="team-photo">🎪</div>
+          <div class="team-card-body">
+            <div class="team-name" data-i18n="tm2_name">Anna Schmidt</div>
+            <div class="team-role" data-i18n="tm2_role">Head of Events</div>
+            <div class="team-bio" data-i18n="tm2_bio">Expert event architect who has delivered 200+ high-profile corporate events.</div>
+          </div>
+        </div>
+        <div class="team-card fade-up">
+          <div class="team-card-top"></div>
+          <div class="team-photo">🎨</div>
+          <div class="team-card-body">
+            <div class="team-name" data-i18n="tm3_name">Lena Wagner</div>
+            <div class="team-role" data-i18n="tm3_role">Creative Director</div>
+            <div class="team-bio" data-i18n="tm3_bio">Award-winning designer bringing bold visual identities to life for global brands.</div>
+          </div>
+        </div>
+        <div class="team-card fade-up">
+          <div class="team-card-top"></div>
+          <div class="team-photo">📊</div>
+          <div class="team-card-body">
+            <div class="team-name" data-i18n="tm4_name">Max Hoffmann</div>
+            <div class="team-role" data-i18n="tm4_role">Digital Strategist</div>
+            <div class="team-bio" data-i18n="tm4_bio">Data-obsessed marketer driving measurable ROI through multi-channel campaigns.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="contact_label">Get in Touch</p>
+      <h2 class="section-title" data-i18n="contact_title">Let's Build Something Great</h2>
+      <p class="section-sub" data-i18n="contact_sub">Ready to elevate your brand? We'd love to hear about your project.</p>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form fade-up">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="form_name">Full Name</label>
+                <input type="text" data-i18n="form_name" placeholder="Full Name" required />
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_email">Email Address</label>
+                <input type="email" data-i18n="form_email" placeholder="Email Address" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="form_phone">Phone Number</label>
+                <input type="tel" data-i18n="form_phone" placeholder="Phone Number" />
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_service">Service of Interest</label>
+                <select>
+                  <option value="" data-i18n="form_svc_default">Select a service…</option>
+                  <option value="brand" data-i18n="form_svc1">Brand Strategy</option>
+                  <option value="digital" data-i18n="form_svc2">Digital Marketing</option>
+                  <option value="events" data-i18n="form_svc3">Event Management</option>
+                  <option value="social" data-i18n="form_svc4">Social Media</option>
+                  <option value="content" data-i18n="form_svc5">Content Creation</option>
+                  <option value="pr" data-i18n="form_svc6">PR &amp; Communications</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_message">Your Message</label>
+              <textarea data-i18n="form_message_ph" placeholder="Tell us about your project…" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" data-i18n="form_submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info fade-up">
+          <h3 data-i18n="ci_title">Contact Information</h3>
+          <p data-i18n="ci_desc">We're based in Munich and work with clients globally. Reach out — we respond within 24 hours.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-text">
+                <strong data-i18n="ci_phone_label">Phone</strong>
+                <span data-i18n="ci_phone">+49 89 123 456 78</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-text">
+                <strong data-i18n="ci_email_label">Email</strong>
+                <span data-i18n="ci_email">hello@bayernmarketing.de</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <strong data-i18n="ci_address_label">Address</strong>
+                <span data-i18n="ci_address">Maximilianstraße 12, 80539 Munich, Germany</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">🕐</div>
+              <div class="contact-item-text">
+                <strong data-i18n="ci_hours_label">Business Hours</strong>
+                <span data-i18n="ci_hours">Mon – Fri, 09:00 – 18:00 CET</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="assets/logo-dark.png" alt="Bayern Marketing Solutions" />
+          <p data-i18n="footer_tagline">Bold marketing and exceptional events that move brands forward.</p>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_company">Company</h4>
+          <ul>
+            <li><a href="#about" data-i18n="fl_about">About Us</a></li>
+            <li><a href="#portfolio" data-i18n="fl_portfolio">Portfolio</a></li>
+            <li><a href="#team" data-i18n="fl_team">Team</a></li>
+            <li><a href="#contact" data-i18n="fl_careers">Careers</a></li>
+            <li><a href="#contact" data-i18n="fl_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_services">Services</h4>
+          <ul>
+            <li><a href="#services" data-i18n="fl_svc1">Brand Strategy</a></li>
+            <li><a href="#services" data-i18n="fl_svc2">Digital Marketing</a></li>
+            <li><a href="#services" data-i18n="fl_svc3">Event Management</a></li>
+            <li><a href="#services" data-i18n="fl_svc4">Social Media</a></li>
+            <li><a href="#services" data-i18n="fl_svc5">Content Creation</a></li>
+            <li><a href="#services" data-i18n="fl_svc6">PR &amp; Communications</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_connect">Connect</h4>
+          <ul>
+            <li><a href="#contact">LinkedIn</a></li>
+            <li><a href="#contact">Instagram</a></li>
+            <li><a href="#contact">Facebook</a></li>
+            <li><a href="#contact">Twitter / X</a></li>
+            <li><a href="#contact">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2024 Bayern Marketing Solutions. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#contact" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#contact" class="social-link" aria-label="Instagram">ig</a>
+          <a href="#contact" class="social-link" aria-label="Facebook">fb</a>
+          <a href="#contact" class="social-link" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
