@@ -571,18 +571,32 @@ footer {
 [dir="rtl"] .nav-right { flex-direction: row-reverse; }
 [dir="rtl"] .stat-pill { border-left: none; border-right: 4px solid var(--red); border-radius: 8px 0 0 8px; }
 [dir="rtl"] .about-grid { direction: rtl; }
-[dir="rtl"] .contact-grid { direction: rtl; }
-[dir="rtl"] .footer-top { direction: rtl; }
-[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
-[dir="rtl"] .form-group input,
-[dir="rtl"] .form-group select,
-[dir="rtl"] .form-group textarea { text-align: right; }
-[dir="rtl"] .contact-item { flex-direction: row-reverse; }
+[dir="rtl"] .hero-btns { direction: rtl; }
 [dir="rtl"] .service-card { text-align: right; }
 [dir="rtl"] .testimonial-card::before { left: auto; right: 1.2rem; }
 [dir="rtl"] .testimonial-author { flex-direction: row-reverse; }
-[dir="rtl"] .hero-btns { direction: rtl; }
-[dir="rtl"] .footer-brand p { margin-right: 0; }
+
+/* Form */
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group select,
+[dir="rtl"] .form-group textarea { text-align: right; direction: rtl; }
+[dir="rtl"] .form-group label { display: block; text-align: right; }
+[dir="rtl"] .form-row { direction: rtl; }
+
+/* Contact info items */
+[dir="rtl"] .contact-grid { direction: rtl; }
+[dir="rtl"] .contact-item { flex-direction: row-reverse; }
+[dir="rtl"] .contact-item-text { text-align: right; }
+[dir="rtl"] .contact-info h3 { text-align: right; }
+[dir="rtl"] .contact-info p { text-align: right; }
+
+/* Footer */
+[dir="rtl"] .footer-top { direction: rtl; }
+[dir="rtl"] .footer-brand p { text-align: right; }
+[dir="rtl"] .footer-col h4 { text-align: right; }
+[dir="rtl"] .footer-col ul { text-align: right; align-items: flex-end; }
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-bottom p { text-align: right; }
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
