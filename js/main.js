@@ -433,6 +433,24 @@ function applyLang(lang) {
   html.dir = lang === 'ar' ? 'rtl' : 'ltr';
   document.body.classList.toggle('rtl-active', lang === 'ar');
 
+  // Update SEO meta for active language
+  const seoTitles = {
+    en: 'Bayern Marketing Solutions | Marketing & Events Agency',
+    de: 'Bayern Marketing Solutions | Marketing & Eventmanagement',
+    ar: 'Bayern Marketing Solutions | وكالة تسويق وفعاليات'
+  };
+  const seoDescs = {
+    en: 'Bold marketing strategies and exceptional events that make your brand unforgettable. Serving clients across Europe and the Middle East.',
+    de: 'Kühne Marketingstrategien und außergewöhnliche Events, die Ihre Marke unvergesslich machen.',
+    ar: 'استراتيجيات تسويق جريئة وفعاليات استثنائية تجعل علامتك التجارية لا تُنسى.'
+  };
+  const ogLocales = { en: 'en_US', de: 'de_DE', ar: 'ar_SA' };
+  document.title = seoTitles[lang] || seoTitles.en;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', seoDescs[lang] || seoDescs.en);
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', seoTitles[lang] || seoTitles.en);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', seoDescs[lang] || seoDescs.en);
+  document.querySelector('meta[property="og:locale"]')?.setAttribute('content', ogLocales[lang] || 'en_US');
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (!t[key]) return;
