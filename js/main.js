@@ -477,10 +477,6 @@ function initNav() {
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileClose = document.getElementById('mobile-close');
 
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     mobileMenu.classList.toggle('open');

@@ -30,7 +30,7 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
 
 /* ── Navigation ── */
 #navbar {
-  position: fixed;
+  position: absolute;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   transition: background 0.3s, box-shadow 0.3s;
