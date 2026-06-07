@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moemenmostafa.github.io/bms-website/sitemap.xml
+Sitemap: https://bayernsolutions.de/sitemap.xml
