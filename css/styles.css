@@ -46,7 +46,14 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
 #navbar .logo img { height: 80px; filter: brightness(0) invert(1); transition: height 0.4s ease, filter 0.5s ease; }
 #navbar.scrolled .logo img { height: 48px; filter: none; }
 
-.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .nav-links a {
   text-decoration: none;
   color: #fff;
