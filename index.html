@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary Meta -->
-  <title>Bayern Marketing Solutions | Coming Soon</title>
-  <meta name="description" content="Bayern Marketing Solutions — a bold marketing and events agency serving Europe and the Middle East. Our new website is coming soon." />
+  <title>Bayern Marketing Solutions | Creative Marketing Agency</title>
+  <meta name="description" content="Bayern Marketing Solutions is a creative marketing agency combining German precision with deep local insight — strategy, branding, performance, and social media, aligned with Vision 2030." />
+  <meta name="keywords" content="marketing agency, branding, brand strategy, performance marketing, social media, SEO, content creation, advertising, Saudi Arabia, Vision 2030" />
   <meta name="author" content="Bayern Marketing Solutions" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bayernsolutions.de/" />
@@ -17,197 +18,366 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
 
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="en" href="https://bayernsolutions.de/" />
+  <link rel="alternate" hreflang="de" href="https://bayernsolutions.de/" />
+  <link rel="alternate" hreflang="ar" href="https://bayernsolutions.de/" />
+  <link rel="alternate" hreflang="x-default" href="https://bayernsolutions.de/" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Bayern Marketing Solutions" />
-  <meta property="og:title" content="Bayern Marketing Solutions | Coming Soon" />
-  <meta property="og:description" content="Bold marketing strategies and exceptional events that make your brand unforgettable. Our new website is coming soon." />
+  <meta property="og:title" content="Bayern Marketing Solutions | Creative Marketing Agency" />
+  <meta property="og:description" content="German precision meets local insight. Strategy, branding, performance, and social media that make your brand impossible to ignore." />
   <meta property="og:url" content="https://bayernsolutions.de/" />
   <meta property="og:image" content="https://bayernsolutions.de/assets/logo-color.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Bayern Marketing Solutions logo" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bayern Marketing Solutions | Coming Soon" />
-  <meta name="twitter:description" content="Bold marketing strategies and exceptional events that make your brand unforgettable." />
+  <meta name="twitter:title" content="Bayern Marketing Solutions | Creative Marketing Agency" />
+  <meta name="twitter:description" content="German precision meets local insight. Marketing that makes your brand impossible to ignore." />
   <meta name="twitter:image" content="https://bayernsolutions.de/assets/logo-color.png" />
 
   <!-- Theme -->
   <meta name="theme-color" content="#CC0000" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Bayern Marketing Solutions",
+    "description": "A creative marketing agency combining German precision with deep local insight, delivering strategy, branding, performance, and social media in alignment with Vision 2030.",
+    "url": "https://bayernsolutions.de/",
+    "logo": "https://bayernsolutions.de/assets/logo-color.png",
+    "image": "https://bayernsolutions.de/assets/logo-color.png",
+    "email": "info@bayernsolutions.de",
+    "areaServed": ["SA", "DE", "AE", "EU"],
+    "knowsLanguage": ["en", "de", "ar"],
+    "serviceType": [
+      "Brand Strategy",
+      "Branding",
+      "Performance Marketing",
+      "Social Media Management",
+      "Search Engine Optimization",
+      "Content Creation",
+      "Marketing Research & Strategic Planning",
+      "Advertising"
+    ]
+  }
+  </script>
 
-  <style>
-    :root {
-      --red: #CC0000;
-      --yellow: #FFC200;
-      --dark: #1A1A1A;
-      --gray: #6B7280;
-      --gradient: linear-gradient(135deg, #FFC200 0%, #CC0000 100%);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-      color: var(--dark);
-      background: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
-    html[dir="rtl"] body { font-family: 'Cairo', 'Inter', sans-serif; }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
-    /* Decorative gradient blobs */
-    .blob {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.18;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .blob-1 { width: 480px; height: 480px; background: var(--red); top: -160px; right: -120px; }
-    .blob-2 { width: 420px; height: 420px; background: var(--yellow); bottom: -140px; left: -120px; }
-
-    /* Language switcher */
-    .lang-switcher {
-      position: absolute;
-      top: 1.5rem;
-      inset-inline-end: 1.5rem;
-      display: flex;
-      gap: 0.35rem;
-      z-index: 2;
-    }
-    .lang-btn {
-      background: transparent;
-      border: 1.5px solid #d1d5db;
-      color: var(--gray);
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      letter-spacing: 0.05em;
-      font-family: inherit;
-    }
-    .lang-btn:hover, .lang-btn.active {
-      background: var(--red);
-      color: #fff;
-      border-color: var(--red);
-    }
-
-    /* Main content */
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .logo img {
-      height: 110px;
-      width: auto;
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.8s ease both;
-    }
-    h1 {
-      font-size: clamp(2.6rem, 7vw, 4.5rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.25rem;
-      animation: fadeUp 0.8s ease 0.15s both;
-    }
-    .tagline {
-      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
-      color: var(--gray);
-      max-width: 580px;
-      line-height: 1.65;
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.8s ease 0.3s both;
-    }
-    .contact {
-      animation: fadeUp 0.8s ease 0.45s both;
-    }
-    .contact-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--gray);
-      margin-bottom: 0.6rem;
-    }
-    .contact a {
-      display: inline-block;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #fff;
-      background: var(--gradient);
-      text-decoration: none;
-      padding: 0.8rem 2rem;
-      border-radius: 999px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 18px rgba(204, 0, 0, 0.25);
-    }
-    .contact a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 26px rgba(204, 0, 0, 0.35);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.82rem;
-      color: var(--gray);
-      position: relative;
-      z-index: 1;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 480px) {
-      .logo img { height: 84px; }
-    }
-  </style>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
 
-  <div class="lang-switcher" role="group" aria-label="Language">
-    <button class="lang-btn active" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="de">DE</button>
-    <button class="lang-btn" data-lang="ar">AR</button>
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#hero" class="logo">
+      <img src="assets/logo-color.png" alt="Bayern Marketing Solutions" id="nav-logo" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#services" data-i18n="nav_services">Services</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#partners" data-i18n="nav_partners">Partners</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button id="mobile-close" style="position:absolute;top:1.5rem;right:1.5rem;font-size:1.8rem;background:none;border:none;cursor:pointer;color:#1A1A1A;">✕</button>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#partners" data-i18n="nav_partners">Partners</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+    <div class="mobile-menu-lang">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="ar">AR</button>
+    </div>
   </div>
 
-  <main>
-    <div class="logo">
-      <img src="assets/logo-color.png" alt="Bayern Marketing Solutions" />
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero_badge">Creative Marketing Agency</div>
+      <h1 class="hero-title" data-i18n="hero_title">For Brands That<br>Refuse to Blend In</h1>
+      <p class="hero-sub" data-i18n="hero_sub">We combine creativity, strategy, and cultural insight to build brands that are seen, heard, and remembered. Great ideas, executed exceptionally well.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary" data-i18n="hero_cta1">Start a Project</a>
+        <a href="#services" class="btn-secondary" data-i18n="hero_cta2">Our Services</a>
+      </div>
     </div>
-    <h1 data-i18n="heading">Coming Soon</h1>
-    <p class="tagline" data-i18n="tagline">Bold marketing strategies and exceptional events that make your brand unforgettable. Our new website is on its way.</p>
-    <div class="contact">
-      <p class="contact-label" data-i18n="contactLabel">Get in touch</p>
-      <a href="mailto:info@bayernsolutions.de">info@bayernsolutions.de</a>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════════ -->
+  <section id="services" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="services_label">What We Do</p>
+      <h2 class="section-title" data-i18n="services_title">Services Built for Impact</h2>
+      <p class="section-sub" data-i18n="services_sub">From strategy to execution, we turn ambitious goals into work that creates real, lasting impact.</p>
+
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-img"><img src="assets/generated/svc-strategy.jpg" alt="" loading="lazy" /></div>
+          <h3 data-i18n="svc1_title">Strategy</h3>
+          <p data-i18n="svc1_desc">We build insight-driven strategies that turn business goals into scalable growth.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-img"><img src="assets/generated/svc-branding.jpg" alt="" loading="lazy" /></div>
+          <h3 data-i18n="svc2_title">Branding</h3>
+          <p data-i18n="svc2_desc">We craft bold brand identities that bring businesses to life and leave a lasting impression.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-img"><img src="assets/generated/svc-performance.jpg" alt="" loading="lazy" /></div>
+          <h3 data-i18n="svc3_title">Performance</h3>
+          <p data-i18n="svc3_desc">We create performance-led campaigns that maximize reach, spark engagement, and deliver real results.</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-img"><img src="assets/generated/svc-social.jpg" alt="" loading="lazy" /></div>
+          <h3 data-i18n="svc4_title">Social Media</h3>
+          <p data-i18n="svc4_desc">We shape digital brand presence that drives engagement and keeps brands top of mind.</p>
+        </div>
+      </div>
+
+      <h3 class="core-title" data-i18n="core_title">Core Services</h3>
+      <div class="core-grid">
+        <span class="core-chip fade-up" data-i18n="core1">Social Media Management</span>
+        <span class="core-chip fade-up" data-i18n="core2">Website Development</span>
+        <span class="core-chip fade-up" data-i18n="core3">Search Engine Optimization (SEO)</span>
+        <span class="core-chip fade-up" data-i18n="core4">Creative Content Creation</span>
+        <span class="core-chip fade-up" data-i18n="core5">Brand Building</span>
+        <span class="core-chip fade-up" data-i18n="core6">Creative Graphic Design</span>
+        <span class="core-chip fade-up" data-i18n="core7">Marketing Research &amp; Strategic Planning</span>
+        <span class="core-chip fade-up" data-i18n="core8">Billboard Design, Rental &amp; Print Campaigns</span>
+        <span class="core-chip fade-up" data-i18n="core9">TV &amp; Radio Advertising</span>
+      </div>
     </div>
   </main>
 
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p class="section-label" data-i18n="about_label">Our Story</p>
+          <h2 data-i18n="about_title">Who Are We?</h2>
+          <p data-i18n="about_p1">We are an agency created for brands that refuse to blend in — for those who seek distinction, not conformity. We combine creativity, strategy, and cultural insight, bringing together local and international expertise to think ambitiously while staying aligned with both local and global markets. Whether it's building a brand, launching a campaign, or producing impactful content, our philosophy is simple: great ideas, executed exceptionally well.</p>
+        </div>
+        <div class="about-visual fade-up">
+          <img src="assets/generated/about.jpg" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="mv-grid">
+        <div class="mv-card fade-up">
+          <h3 data-i18n="mission_title">Our Mission</h3>
+          <p data-i18n="mission_text">To deliver performance-oriented, data-driven marketing solutions that integrate German standards of precision, efficiency, and innovation with profound local market insight and cultural relevance.</p>
+        </div>
+        <div class="mv-card fade-up">
+          <h3 data-i18n="vision_title">Our Vision</h3>
+          <p data-i18n="vision_text">To be part of the future of advertising and marketing in the Kingdom, in alignment with Vision 2030 — pushing creative boundaries, elevating industry standards, and delivering work that leaves not just a positive impression, but a lasting influence.</p>
+        </div>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card fade-up">
+          <h4 data-i18n="val1_title">Impact-Driven Creativity</h4>
+          <p data-i18n="val1_desc">We develop ideas, identities, and campaigns that go beyond aesthetics, creating presence and experiences that are hard to ignore.</p>
+        </div>
+        <div class="value-card fade-up">
+          <h4 data-i18n="val2_title">Strategic Thinking</h4>
+          <p data-i18n="val2_desc">We start with a deep understanding of the market, audience, and objectives to build clear, scalable marketing strategies.</p>
+        </div>
+        <div class="value-card fade-up">
+          <h4 data-i18n="val3_title">Lasting Impact</h4>
+          <p data-i18n="val3_desc">We aim to create work that goes beyond visibility, delivering meaningful engagement aligned with the ambitions of Vision 2030.</p>
+        </div>
+        <div class="value-card fade-up">
+          <h4 data-i18n="val4_title">Smart Execution</h4>
+          <p data-i18n="val4_desc">We leverage the latest tools and technologies to deliver precise, agile, and performance-driven campaigns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PARTNERS
+  ══════════════════════════════════════════ -->
+  <section id="partners" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="partners_label">Trusted By</p>
+      <h2 class="section-title" data-i18n="partners_title">Our Partners</h2>
+      <p class="section-sub" data-i18n="partners_sub">We're proud to have collaborated with leading organizations across the region.</p>
+
+      <div class="partners-grid">
+        <div class="partner-logo fade-up"><img src="assets/partners/aramco-team-series.png" alt="Aramco Team Series" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/aramco-saudi-ladies.png" alt="Aramco Saudi Ladies International" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/liv-golf.jpeg" alt="LIV Golf" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/pif-saudi-international.png" alt="Public Investment Fund — Saudi International" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/ministry-of-sport.png" alt="Ministry of Sport" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/ministry-of-education.png" alt="Ministry of Education" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/general-sports-authority.png" alt="General Sports Authority" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/saudia.png" alt="Saudia" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/saudi-health-specialties.png" alt="Saudi Commission for Health Specialties" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/hrdf.jpeg" alt="Human Resources Development Fund" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/ceer.png" alt="CEER" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/spl.png" alt="SPL" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/abha-chamber.png" alt="Abha Chamber" loading="lazy" /></div>
+        <div class="partner-logo fade-up"><img src="assets/partners/overdose.png" alt="Overdose" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CTA BAND
+  ══════════════════════════════════════════ -->
+  <section id="cta-band">
+    <div class="cta-inner">
+      <h2 data-i18n="cta_title">Ready to be impossible to ignore?</h2>
+      <p data-i18n="cta_sub">Let's turn your goals into work that leaves a lasting impression.</p>
+      <a href="#contact" class="btn-primary" data-i18n="cta_btn">Start a Project</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <p class="section-label" data-i18n="contact_label">Get in Touch</p>
+      <h2 class="section-title" data-i18n="contact_title">Let's Build Something Great</h2>
+      <p class="section-sub" data-i18n="contact_sub">Ready to elevate your brand? Tell us about your project — we'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form fade-up">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="form_name">Full Name</label>
+                <input type="text" name="name" data-i18n="form_name" placeholder="Full Name" required />
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_email">Email Address</label>
+                <input type="email" name="email" data-i18n="form_email" placeholder="Email Address" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_service">Service of Interest</label>
+              <select name="service">
+                <option value="" data-i18n="form_svc_default">Select a service…</option>
+                <option value="strategy" data-i18n="svc1_title">Strategy</option>
+                <option value="branding" data-i18n="svc2_title">Branding</option>
+                <option value="performance" data-i18n="svc3_title">Performance</option>
+                <option value="social" data-i18n="svc4_title">Social Media</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_message">Your Message</label>
+              <textarea name="message" data-i18n="form_message_ph" placeholder="Tell us about your project…" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" data-i18n="form_submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info fade-up">
+          <h3 data-i18n="ci_title">Contact Information</h3>
+          <p data-i18n="ci_desc">Reach out and we'll respond within 24 hours. We work in English, German, and Arabic.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-text">
+                <strong data-i18n="ci_email_label">Email</strong>
+                <a href="mailto:info@bayernsolutions.de">info@bayernsolutions.de</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
   <footer>
-    <span data-i18n="footer">© 2026 Bayern Marketing Solutions. All rights reserved.</span>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="assets/logo-black.png" alt="Bayern Marketing Solutions" class="footer-logo" />
+          <p data-i18n="footer_tagline">Great ideas, executed exceptionally well. German precision meets local insight.</p>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_company">Company</h4>
+          <ul>
+            <li><a href="#about" data-i18n="fl_about">About Us</a></li>
+            <li><a href="#partners" data-i18n="fl_partners">Partners</a></li>
+            <li><a href="#contact" data-i18n="fl_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_services">Services</h4>
+          <ul>
+            <li><a href="#services" data-i18n="svc1_title">Strategy</a></li>
+            <li><a href="#services" data-i18n="svc2_title">Branding</a></li>
+            <li><a href="#services" data-i18n="svc3_title">Performance</a></li>
+            <li><a href="#services" data-i18n="svc4_title">Social Media</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_connect">Connect</h4>
+          <ul>
+            <li><a href="mailto:info@bayernsolutions.de">info@bayernsolutions.de</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2026 Bayern Marketing Solutions. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script>
