@@ -285,6 +285,10 @@
         <!-- Form -->
         <div class="contact-form fade-up">
           <form id="contact-form" novalidate>
+            <input type="hidden" name="access_key" value="aca33793-4a8d-4edf-b34c-287db50836b3" />
+            <input type="hidden" name="subject" value="New project enquiry — bayernsolutions.de" />
+            <input type="hidden" name="from_name" value="Bayern Marketing Solutions Website" />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important;" aria-hidden="true" />
             <div class="form-row">
               <div class="form-group">
                 <label data-i18n="form_name">Full Name</label>
@@ -310,6 +314,7 @@
               <textarea name="message" data-i18n="form_message_ph" placeholder="Tell us about your project…" rows="5"></textarea>
             </div>
             <button type="submit" class="btn-submit" data-i18n="form_submit">Send Message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 

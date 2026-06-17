@@ -596,6 +596,13 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--dark); backgro
   font-family: inherit;
 }
 .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+.form-status { margin-top: 1rem; font-size: 0.92rem; font-weight: 600; line-height: 1.5; min-height: 1.2em; }
+.form-status.sending { color: var(--gray); }
+.form-status.success { color: #16a34a; }
+.form-status.error { color: var(--red); }
+body.rtl-active .form-status { text-align: right; }
 
 .contact-info h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.75rem; }
 .contact-info p { color: var(--gray); line-height: 1.7; margin-bottom: 2rem; font-size: 0.97rem; }

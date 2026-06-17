@@ -409,28 +409,49 @@ function initScrollAnimations() {
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 }
 
-/* ─── Contact Form (opens mail client — no backend on static hosting) ─── */
+/* ─── Contact Form (submits to Web3Forms — no backend required) ─── */
+const formMessages = {
+  en: { sending: 'Sending…', success: '✓ Thanks! Your message has been sent.', error: 'Something went wrong. Please email info@bayernsolutions.de.' },
+  de: { sending: 'Wird gesendet…', success: '✓ Danke! Ihre Nachricht wurde gesendet.', error: 'Etwas ist schiefgelaufen. Bitte schreiben Sie an info@bayernsolutions.de.' },
+  ar: { sending: 'جارٍ الإرسال…', success: '✓ شكرًا! تم إرسال رسالتك.', error: 'حدث خطأ ما. يرجى المراسلة على info@bayernsolutions.de.' }
+};
+
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const name = (data.get('name') || '').toString().trim();
-    const email = (data.get('email') || '').toString().trim();
-    const service = (data.get('service') || '').toString().trim();
-    const message = (data.get('message') || '').toString().trim();
+  const status = document.getElementById('form-status');
+  const btn = form.querySelector('.btn-submit');
 
-    const subject = `New project enquiry${name ? ' — ' + name : ''}`;
-    const bodyLines = [
-      name ? `Name: ${name}` : '',
-      email ? `Email: ${email}` : '',
-      service ? `Service: ${service}` : '',
-      '',
-      message
-    ].filter(Boolean);
-    const mailto = `mailto:info@bayernsolutions.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-    window.location.href = mailto;
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const m = formMessages[currentLang] || formMessages.en;
+    const btnLabel = (translations[currentLang] || translations.en).form_submit;
+
+    status.className = 'form-status sending';
+    status.textContent = m.sending;
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        status.className = 'form-status success';
+        status.textContent = m.success;
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Request failed');
+      }
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = m.error;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = btnLabel;
+    }
   });
 }
 
