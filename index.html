@@ -42,8 +42,9 @@
   <meta name="twitter:description" content="German precision meets local insight. Marketing that makes your brand impossible to ignore." />
   <meta name="twitter:image" content="https://bayernsolutions.de/assets/logo-color.png" />
 
-  <!-- Theme -->
+  <!-- Theme & PWA -->
   <meta name="theme-color" content="#CC0000" />
+  <meta name="msapplication-TileColor" content="#CC0000" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -80,8 +81,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
 
   <!-- ══════════════════════════════════════════
        NAVIGATION
@@ -184,7 +183,7 @@
         <span class="core-chip fade-up" data-i18n="core9">TV &amp; Radio Advertising</span>
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- ══════════════════════════════════════════
        ABOUT
@@ -380,47 +379,7 @@
     </div>
   </footer>
 
-  <script>
-    const translations = {
-      en: {
-        heading: 'Coming Soon',
-        tagline: 'Bold marketing strategies and exceptional events that make your brand unforgettable. Our new website is on its way.',
-        contactLabel: 'Get in touch',
-        footer: '© 2026 Bayern Marketing Solutions. All rights reserved.',
-        title: 'Bayern Marketing Solutions | Coming Soon'
-      },
-      de: {
-        heading: 'Demnächst',
-        tagline: 'Mutige Marketingstrategien und außergewöhnliche Events, die Ihre Marke unvergesslich machen. Unsere neue Website ist in Arbeit.',
-        contactLabel: 'Kontaktieren Sie uns',
-        footer: '© 2026 Bayern Marketing Solutions. Alle Rechte vorbehalten.',
-        title: 'Bayern Marketing Solutions | Demnächst'
-      },
-      ar: {
-        heading: 'قريباً',
-        tagline: 'استراتيجيات تسويق جريئة وفعاليات استثنائية تجعل علامتك التجارية لا تُنسى. موقعنا الجديد قادم قريباً.',
-        contactLabel: 'تواصل معنا',
-        footer: '© 2026 بايرن لحلول التسويق. جميع الحقوق محفوظة.',
-        title: 'بايرن لحلول التسويق | قريباً'
-      }
-    };
-
-    function setLanguage(lang) {
-      const t = translations[lang];
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.title = t.title;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        el.textContent = t[el.dataset.i18n];
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-    }
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-    });
-  </script>
+  <!-- JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>
